@@ -553,6 +553,7 @@ public sealed class FaceFeature
     /// <summary>
     /// 1:1 人脸比较，返回余弦相似度
     /// </summary>
+    [Obsolete("建议使用 Compare(ReadOnlySpan<float>, ReadOnlySpan<float>) 方法，避免不必要的数组复制和 GCHandle 开销")]
     public static float Compare(FaceFeature feature1, FaceFeature feature2)
     {
         // 需要 pin 数据
@@ -569,6 +570,21 @@ public sealed class FaceFeature
         {
             pinned1.Free();
             pinned2.Free();
+        }
+    }
+
+    /// <summary>
+    /// 1:1 人脸比较，返回余弦相似度
+    /// </summary>
+    public static unsafe float Compare(ReadOnlySpan<float> feature1, ReadOnlySpan<float> feature2)
+    {
+        fixed (float* ptr1 = feature1)
+        fixed (float* ptr2 = feature2)
+        {
+            var f1 = new HFFaceFeature { Size = feature1.Length, Data = (nint)ptr1 };
+            var f2 = new HFFaceFeature { Size = feature2.Length, Data = (nint)ptr2 };
+            NativeMethods.HFFaceComparison(f1, f2, out float result).CheckResult();
+            return result;
         }
     }
 

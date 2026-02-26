@@ -16,6 +16,9 @@
     <None Update="res\Megatron">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="res\Megatron_TRT">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="res\Pikachu">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
