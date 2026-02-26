@@ -37,6 +37,11 @@ public static class InspireFaceLibrary
     public static void Launch() => Launch(DefaultResourcePath_Megatron);
 
     /// <summary>
+    /// 启动轻量级模型版本的 InspireFace SDK，适用于边缘设备和移动端
+    /// </summary>
+    public static void LaunchLight() => Launch(DefaultResourcePath_Pikachu);
+
+    /// <summary>
     /// 重新加载 InspireFace SDK
     /// </summary>
     public static void Reload(string resourcePath)
