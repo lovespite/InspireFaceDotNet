@@ -20,7 +20,7 @@ public static class InspireFaceLibrary
     /// <summary>
     /// Lightweight edge-side models
     /// </summary>
-    public const string DefaultResourcePath_Pikachu= "res/Pikachu"; // 默认资源路径
+    public const string DefaultResourcePath_Pikachu = "res/Pikachu"; // 默认资源路径
 
     /// <summary>
     /// 启动 InspireFace SDK

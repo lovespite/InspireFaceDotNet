@@ -16,7 +16,7 @@ public static partial class NativeMethods
     /// 原生 DLL 名称。部署时确保 InspireFace 动态库在应用程序目录或系统 PATH 中。
     /// Windows: *.dll | Linux: *.so | macOS: *.dylib
     /// </summary>
-    public const string DllName = "runtime/InspireFace_x64";
+    public const string DllName = "runtimes/InspireFace_x64";
 
     // ========================================================================
     // SDK 生命周期
