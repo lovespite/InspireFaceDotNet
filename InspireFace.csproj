@@ -19,7 +19,7 @@
     <None Update="res\Pikachu">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="runtime\InspireFace_x64.dll">
+    <None Update="runtimes\InspireFace_x64.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
